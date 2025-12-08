@@ -47,12 +47,41 @@
         
         
         let client = {
-            nom: "bacar",
-            village:"koungou",
-            age:25,
-            scores:[40,2]
+            nom: "bacar",/*le nom du client*/
+            village:"koungou",/*le village du client*/
+            age:25,/*sont age*/
+            scores:[40,2], /*sont score*/
             
         };
+        console.log(client);/*j'affiche mon objet sur ma page web sur la partie console*/
+        
+        let joueurprofessionnel={
+            nom:"zinedi",
+            prénom:"zidane",
+            nationalité:['français','Algérienne'],
+            datedenaissance:23061972,
+            taille:[1,85],
+            piedfort:"droit",
+            poste:"Millieu offensif",
+        }
+        console.log(joueurprofessionnel);/*consol.log pour afficher mon objet sur ma page web sur la partie console*/
 
+        let femmepolitique = {
+            nom:"M'Déré",/*le nom de la femme*/
+            prénom:"zéna",/*sont prénom*/
+            nationalité:"français",/*sa nationalité*/
+            datedenaissance:1917.1922,/*sa date de naissance*/
+            village:"pamandzi",/*sont village*/
+            
 
-       
+            
+
+            
+            
+
+        };
+
+        console.log(femmepolitique);
+
+        
+        
