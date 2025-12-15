@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
     <link rel="stylesheet" href="calcul_age.css">
+    <script src="dom_calcul_age.js"defer></script>
     
 
 
@@ -15,6 +16,9 @@
 <body>
     <h1><u>Formulaire</u></h1>
     <form>
+        <div>
+            <p id="mayotte">population de mayotte.</p>
+        </div>
         <div>
             <!--Zone de Nom d'utilisateur-->
         <label for="surname">Nom:</label>
@@ -34,10 +38,19 @@
         </div>
         <br>
         <div>
-            <label for="year">Année de naissance :</label>
-            <input type="number" id="year" min="1900" max="2025">
+          <label>Année de naissance :</label>
+          <input type="number" id="anneeNaissance" placeholder="Année"
+           min="1900" max="2099" onchange="calculerAge()">
+          <label>Âge :</label>
+          <input type="text" id="age" readonly>
+          <br><br>
+          <input type="submit" value="Valider" id="boutonValider">
+          
+
         </div>
-        <div>
+    </form>
+
+
 
           
 
