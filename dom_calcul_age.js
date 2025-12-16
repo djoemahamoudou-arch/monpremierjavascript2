@@ -45,4 +45,51 @@ for(let i = 0; i< elementClassCommune.length; i++){
     
 }
 
+// J'insère une élèment qui s'appellle balise nomé dans le fichier html
+let elementSection = document.createElement("section");
+
+let elementBody = document.querySelector('body');
+elementBody.appendChild(elementSection);
+
+
+
+
+
+
+
+// deja faut selectionner un balise sur html la ou on va stocker mon texte
+let elementArticle = document.querySelector("article");
+// ensuite cree sont balise de title
+let nouveautitres = document.createElement("h4");
+
+// ecrire ce que je vais mettre a l'interieure de mon texte
+nouveautitres.textContent = "Mon article";
+//appeller ma selection pour mettre le niveau title. 
+elementArticle.appendChild(nouveautitres);
+
+
+// je mis une image sur ma page en javascript.
+let elementImg = document.querySelector('body');
+
+let nouveauImg = document.createElement("img");
+nouveauImg.src = "html.jpg";
+elementImg.setAttribute("alt" , "Mon html");
+elementImg.className = "image-oiseau";
+elementImg.classList.add("image" , "image3");
+
+elementImg.classList.remove("image3");
+
+elementBody.appendChild(nouveauImg);
+
+
+
+
+
+
+
+
+
+
+
+
 
