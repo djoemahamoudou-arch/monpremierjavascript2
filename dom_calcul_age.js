@@ -25,5 +25,24 @@ console.log(document.head);
 console.log(document.title);
 
 // 
-let elementDivMayotte = document.querySelector("#mayotte");
-console.log(elementDivMayotte);
+
+let elementListeCommune = document.querySelector("#listecommune");
+console.log(elementListeCommune);
+
+for(let i = 0;  i< elementListeCommune.length; i++){
+    console.log(elementListeCommune[i]);
+}
+
+// la j'ai afficher ma liste .
+// ensuite j'ai mis un autre console.log pour ajouter textecontent qui va s'afficher en bas de mon premier realisation
+
+let elementClassCommune = document.querySelectorAll(".commune");
+console.log(elementClassCommune);
+
+for(let i = 0; i< elementClassCommune.length; i++){
+    console.log(elementClassCommune[i]);
+    console.log(elementClassCommune[i].textContent);
+    
+}
+
+
