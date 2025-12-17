@@ -19,13 +19,18 @@
         <article>
             <br>
             <!--c'est pour declarer les fonction de date et l'heure -->
-            <div id="date" class="date">
+            <div id="date">
                 <button id="validerDate">Date du jour</button>
                 <span id="DateDuJour"></span>
                 <br>
                 <p>
                     <span id="dateDuJourFormat2"></span>
                 </p>
+            </div>
+
+            <div id="fonctionFlech">
+              <button id="boutonflech">Fonction flechiée</button>
+                
             </div>
 
      
@@ -77,10 +82,17 @@
           <label>Année de naissance :</label>
           <input type="number" id="anneeNaissance" placeholder="Année"
            min="1900" max="2099" onchange="calculerAge()">
+           <p id="messageUtilisateur">
+            Vous etre agé de <span id="age_calcule"></span>
+         </p>
+        </div>
+        <div>
           <label>Âge :</label>
           <input type="text" id="age" readonly>
           <br><br>
           <input type="submit" value="Valider" id="boutonValider">
+          </div>
+
           
 
         </div>
