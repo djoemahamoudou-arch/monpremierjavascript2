@@ -2,22 +2,19 @@ body {
     background-color: rgb(239, 237, 234);
 }
 
-div {
-    margin-inline-start: 15px;
-    background-color: darkorange;
-    padding: 5px;
-    text-align: center;
-}
 
-h1 {
+
+
+label,input{
     margin-inline-start: 10px;
-    background-color: darkorange;
+   
     text-align: center;
 }
 
 div input {
     border-radius: 5px;
     border-style: solid;
+    border: 2px;
 }
 
     
