@@ -60,13 +60,13 @@ elementForm.addEventListener("submit" , (event) => {
     const prenom = document.querySelector("#prenom").value;
     const select = document.querySelector("#projet").value;
     const année = document.querySelector("#anneeNaissance").value;
-    const age = document.querySelector("#age_calcule").value;
+    
    
 
 
-    console.log(nom);
-    console.log(prenom);
-    console.log(select);
-    console.log(année);
-    console.log(age);
+    console.log("Nom :",nom);
+    console.log("Prénom:" ,prenom);
+    console.log("sélèction :" , select);
+    console.log("l'années :" ,année);
+    
 });
