@@ -11,10 +11,15 @@ label,input{
     text-align: center;
 }
 
-div input {
+div input  {
     border-radius: 5px;
     border-style: solid;
     border: 2px;
+
+}
+
+div p{
+    margin: 10px;
 }
 
     

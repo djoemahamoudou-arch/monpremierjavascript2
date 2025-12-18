@@ -17,7 +17,7 @@
 <body>
     <section>
         <article>
-            <br>
+            
             <!--c'est pour declarer les fonction de date et l'heure -->
             <div id="date">
                 <button id="validerDate">Date du jour</button>
@@ -27,7 +27,7 @@
                     <span id="dateDuJourFormat2"></span>
                 </p>
             </div>
-
+            <!--l'évenement qui s'appelle keydown-->
             <div id="fonctionFlech">
               <button id="boutonflech">Fonction flechiée</button>
                 
@@ -71,31 +71,25 @@
         <br>
         <div>
         <label for="">Situation :</label>
-            <select id="" name="">
-                <option value="projet">Etudiant</option>
-                <option value="projet">salarié</option>
+            <select id="option" name="">
+                <option id="projet">Etudiant</option>
+                <option id="projet">salarié</option>
             </select>
     
         </div>
         <br>
         <div>
           <label>Année de naissance :</label>
-          <input type="number" id="anneeNaissance" placeholder="Année"
-           min="1900" max="2099" onchange="calculerAge()">
-           <p id="messageUtilisateur">
-            Vous etre agé de <span id="age_calcule"></span>
-         </p>
+            <input type="number" id="anneeNaissance" placeholder="Année"
+            min="1900" max="2025" onchange="calculerAge()">
+        
+            <p id="messageUtilisateur">
+            Vous êtes âgé de <strong><span id="age_calcule"></span></strong> ans.
+        </p>
         </div>
         <div>
-          <label>Âge :</label>
-          <input type="text" id="age" readonly>
-          <br><br>
-          <input type="submit" value="Valider" id="boutonValider">
-          </div>
-
-          
-
-        </div>
+          <button type="submit" id="boutonValider">Valider</button>
+       
     </form>
  </article> 
 </section> 

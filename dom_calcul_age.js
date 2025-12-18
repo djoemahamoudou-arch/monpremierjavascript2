@@ -1,14 +1,18 @@
 
 function calculerAge() {
-    const anneeNaissance = parseInt(document.getElementById("anneeNaissance").value);
-    if (!anneeNaissance) return;
-
+    const anneeNaissance = document.getElementById("anneeNaissance").value;
     const anneeActuelle = new Date().getFullYear();
-    const age = anneeActuelle - anneeNaissance;
-    
-    // Sélectionne l’élément HTML qui a l’id="age" value qui veut dire la valeur (en général un champ <input>)
-    document.getElementById("age").value = age >= 0 ? age : "";
-}
+
+    if (anneeNaissance && anneeNaissance <= anneeActuelle) {
+        const age = anneeActuelle - anneeNaissance;
+        document.getElementById("age_calcule").textContent = age;
+    } else {
+        document.getElementById("age_calcule").textContent = "age";
+    }
+
+};
+
+
 
 // J'utilise l'identifiant pour trouver le bon élément.
 let elementBoutonValider = document.getElementById("boutonValider");
