@@ -2,15 +2,24 @@
 function calculerAge() {
     const anneeNaissance = document.getElementById("anneeNaissance").value;
     const anneeActuelle = new Date().getFullYear();
+    const nom = document.getElementById("nom").value;
 
-    if (anneeNaissance && anneeNaissance <= anneeActuelle) {
+    if ( anneeNaissance <= anneeActuelle) {
         const age = anneeActuelle - anneeNaissance;
-        document.getElementById("age_calcule").textContent = age;
-    } else {
-        document.getElementById("age_calcule").textContent = "age";
-    }
 
+        document.getElementById("age_calcule").textContent = age;
+        document.getElementById("nom_affiche").textContent = nom;
+//  c'est pour afficher l'alert sur ma page pour indiquer si cette personne est majeur ou mineur.
+        if (age >= 18) {
+            alert("Cette personne est majeure"); 
+        } else {
+            alert("Cette personne est mineure");
+        }  
+    }  
 };
+
+
+
 
 
 

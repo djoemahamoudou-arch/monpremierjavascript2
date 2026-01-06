@@ -62,8 +62,8 @@
       
         <div>
             <!--Zone de Nom d'utilisateur-->
-        <label for="surname">Nom:</label>
-        <input type="text" name="surname" id="nom">
+        <label for="name">Nom:</label>
+        <input type="text" name="name" id="nom">
         <!--Zone prenom d'utilisateur-->
         <label for="prenom">Prénom(s):</label>
         <input type="text" name="prenom" id="prenom">
@@ -84,7 +84,9 @@
             min="1900" max="2025" onchange="calculerAge()">
         
             <p id="messageUtilisateur">
-            Vous êtes âgé de <strong><span id="age_calcule"></span></strong> ans.
+            Bonjour <strong><span id="nom_affiche"></span></strong>,  
+            vous êtes âgé de <strong><span id="age_calcule"></span></strong> ans
+
         </p>
         </div>
         <div>
