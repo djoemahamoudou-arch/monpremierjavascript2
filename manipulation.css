@@ -1,0 +1,55 @@
+.rachid{
+    display: flex;
+   justify-content: center;      /* centrer horizontalement */
+    align-items: center;          /* centrer verticalement */
+    flex-direction: column;       /* texte au-dessus si besoin */
+    width: 120px;                 /* largeur du carré */
+    height: 120px;                /* hauteur du carré */
+    background-color: #7ec8f0;    /* bleu clair */
+    border-radius: 15px;          /* coins arrondis */
+    margin: 20px auto;            /* centrer et espacement vertical */
+    font-size: 36px;              /* texte visible */
+    font-weight: bold;
+    color: #333;                  /* texte sombre */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* effet relief */
+    text-align: center;
+   
+   
+}
+
+.rachid2{
+    display: flex;
+   justify-content: center;      /* centrer horizontalement */
+    align-items: center;          /* centrer verticalement */
+    flex-direction: column;       /* texte au-dessus si besoin */
+    width: 120px;                 /* largeur du carré */
+    height: 120px;                /* hauteur du carré */
+    background-color: #7ec8f0;    /* bleu clair */
+    border-radius: 15px;          /* coins arrondis */
+    margin: 20px auto;            /* centrer et espacement vertical */
+    font-size: 36px;              /* texte visible */
+    font-weight: bold;
+    color: #333;                  /* texte sombre */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* effet relief */
+    text-align: center;
+
+}
+
+.rachid3{
+    display: flex;
+    justify-content: center;      /* centrer horizontalement */
+    align-items: center;          /* centrer verticalement */
+    flex-direction: column;       /* texte au-dessus si besoin */
+    width: 170px;                 /* largeur du carré */
+    height: 120px;                /* hauteur du carré */
+    background-color: #7ec8f0;    /* bleu clair */
+    border-radius: 15px;          /* coins arrondis */
+    margin: 20px auto;            /* centrer et espacement vertical */
+    font-size: 36px;              /* texte visible */
+    font-weight: bold;
+    color: #333;                  /* texte sombre */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* effet relief */
+    text-align: center;
+    
+    
+}
