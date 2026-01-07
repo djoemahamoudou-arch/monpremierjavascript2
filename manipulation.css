@@ -1,55 +1,100 @@
-.rachid{
-    display: flex;
-   justify-content: center;      /* centrer horizontalement */
-    align-items: center;          /* centrer verticalement */
-    flex-direction: column;       /* texte au-dessus si besoin */
-    width: 120px;                 /* largeur du carré */
-    height: 120px;                /* hauteur du carré */
-    background-color: #7ec8f0;    /* bleu clair */
-    border-radius: 15px;          /* coins arrondis */
-    margin: 20px auto;            /* centrer et espacement vertical */
-    font-size: 36px;              /* texte visible */
-    font-weight: bold;
-    color: #333;                  /* texte sombre */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* effet relief */
-    text-align: center;
-   
-   
+body {
+    font-family: 'Arial', sans-serif; /* Définit la police du texte pour toute la page, ici Arial avec fallback sans-serif */
+    background: #f0f2f5;              /* Couleur de fond claire pour toute la page */
+    display: flex;                     /* Active Flexbox pour le body, utile pour aligner les éléments enfants facilement */
+    flex-direction: column;            /* Dispose les éléments enfants verticalement (de haut en bas) */
+    align-items: center;               /* Centre horizontalement tous les éléments enfants dans le body */
+    margin: 0;                          /* Supprime la marge par défaut du body */
+    padding: 20px;                     /* Ajoute un espace intérieur autour du contenu du body */
 }
 
-.rachid2{
-    display: flex;
-   justify-content: center;      /* centrer horizontalement */
-    align-items: center;          /* centrer verticalement */
-    flex-direction: column;       /* texte au-dessus si besoin */
-    width: 120px;                 /* largeur du carré */
-    height: 120px;                /* hauteur du carré */
-    background-color: #7ec8f0;    /* bleu clair */
-    border-radius: 15px;          /* coins arrondis */
-    margin: 20px auto;            /* centrer et espacement vertical */
-    font-size: 36px;              /* texte visible */
-    font-weight: bold;
-    color: #333;                  /* texte sombre */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* effet relief */
-    text-align: center;
 
+/* TITRE */
+h1 {
+    font-size: 48px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-.rachid3{
+/* CONTENEUR DES CARTES DE DATE */
+.container {
     display: flex;
-    justify-content: center;      /* centrer horizontalement */
-    align-items: center;          /* centrer verticalement */
-    flex-direction: column;       /* texte au-dessus si besoin */
-    width: 170px;                 /* largeur du carré */
-    height: 120px;                /* hauteur du carré */
-    background-color: #7ec8f0;    /* bleu clair */
-    border-radius: 15px;          /* coins arrondis */
-    margin: 20px auto;            /* centrer et espacement vertical */
-    font-size: 36px;              /* texte visible */
+    gap: 20px;
+    flex-wrap: wrap; /* responsive */
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* BASE POUR CHAQUE CARTE DE DATE */
+.rachid, .rachid2, .rachid3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;       /* vertical centré */
+    align-items: flex-start;       /* texte à gauche */
+    width: 140px;
+    height: 120px;
+    padding: 15px;
+    background: linear-gradient(135deg, #3FD4A9, #a7cdc2);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    color: #141313;
+    font-size: 28px;
     font-weight: bold;
-    color: #333;                  /* texte sombre */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* effet relief */
-    text-align: center;
-    
-    
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Effet au survol des cartes .rachid, .rachid2 et .rachid3 */
+.rachid:hover, .rachid2:hover, .rachid3:hover {
+    transform: scale(1.05); /* Agrandit légèrement la carte à 105% pour un effet zoom */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); 
+    /* Ombre plus prononcée :
+       0 = pas de décalage horizontal
+       10px = décalage vertical
+       25px = flou de l'ombre
+       rgba(0,0,0,0.3) = couleur noire à 30% de transparence */
+}
+
+/* HEURES */
+.heure {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: flex-start;   /* texte à gauche */
+    align-items: center;           /* vertical centré */
+    width: 300px;
+    padding: 15px 25px;
+    margin: 10px 0;
+    background: linear-gradient(135deg,#3FD4A9, #a7cdc2); /* rose dégradé */
+    color: #333;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.heure:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heure {
+        width: 90%;
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .rachid, .rachid2, .rachid3 {
+        width: 90%;
+        font-size: 24px;
+    }
 }

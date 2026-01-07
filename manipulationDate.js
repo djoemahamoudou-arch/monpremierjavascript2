@@ -25,58 +25,41 @@ document.getElementById("datecomplet").textContent = jour + "/" + mois + "/" + a
 
 
 
+function afficherHeures() {
+            const maintenant = new Date();
 
+             // Heure locale (appareil)
+    document.getElementById("heureLocale").textContent =
+        maintenant.toLocaleTimeString("fr-FR", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
 
+        
+             // Heure Paris
+      document.getElementById("heureParis").textContent =
+            maintenant.toLocaleTimeString("fr-FR", {
+            timeZone: "Europe/Paris",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
+         
+            // Heure Tokyo
+            document.getElementById("heureTokyo").textContent =
+                maintenant.toLocaleTimeString("fr-FR", {
+                    timeZone: "Asia/Tokyo",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit"
+                });
+        }
 
-const maintenant = new Date();
-
-    // Récupérer heures, minutes et secondes
-    const heures = String(maintenant.getHours()).padStart(2, '0');
-    const minutes = String(maintenant.getMinutes()).padStart(2, '0');
-    const secondes = String(maintenant.getSeconds()).padStart(2, '0');
-
-    // Afficher dans le span
-    document.getElementById("affichageHeure").textContent = heures + ':' + minutes + ':' + secondes;
-
-
-
-
-
-// Créer un objet Date pour l'instant actuel
-const maintenant2 = new Date();
-
-// Convertir la date pour le fuseau Paris
-const heureParis = maintenant2.toLocaleTimeString('fr-FR', { 
-    timeZone: 'Europe/Paris',   // fuseau Paris
-    hour: '2-digit', 
-    minute: '2-digit', 
-    second: '2-digit', 
-    hour12: false                // format 24h
-});
-
-// Afficher dans le span
-document.getElementById("affichageHeure2").textContent = heureParis;
- 
-
-
-
-
-// Créer un objet Date pour l'instant actuel
-const maintenant3 = new Date();
-
-// Convertir la date pour le fuseau Tokyo
-const heureTokyo = maintenant3.toLocaleTimeString('fr-FR', { 
-    timeZone: 'Asia/Tokyo',   // fuseau Tokyo
-    hour: '2-digit', 
-    minute: '2-digit', 
-    second: '2-digit', 
-    hour12: false              // format 24h
-});
-
-// Afficher dans le span
-document.getElementById("heureTokyo").textContent = heureTokyo;
-
-
+        // Mise à jour chaque seconde
+        afficherHeures();
+        setInterval(afficherHeures, 1000);
+    
 
 
 
